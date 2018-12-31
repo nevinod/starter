@@ -7,10 +7,12 @@ class CoinInfo extends React.Component {
   }
 
   render() {
+    let deleteSingleCoin = this.props.deleteSingleCoin
     return (
       <li className="coin-item">
-        <h1>{this.props.name}</h1>
-        <p>{this.props.price}</p>
+        <button className="x-button" onClick={() => deleteSingleCoin(this.props.name)}>X</button>
+        <h1 className="coin-name">{this.props.name}</h1>
+        <p className="coin-price">{this.props.price}</p>
       </li>
     )
   }
