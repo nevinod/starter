@@ -64,11 +64,8 @@ class CoinIndex extends Component {
 			}
 		}
 		this.setState({all_inputs: arr})
-		
-		// console.log(temp)
-		
+				
 		this.setState({ input: temp })
-		// console.log(this.state.all_inputs)
 		console.log(this.state.input)
 		
 		const fart = await axios.get('https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC&tsyms=USD')
